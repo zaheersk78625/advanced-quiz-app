@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pro Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- PDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="difficulty-container" id="difficulty-container">
+  <h1>Pro Quiz App</h1>
+  <h2>Select Difficulty</h2>
+  <button onclick="startQuiz('easy')" class="easy">Easy</button>
+  <button onclick="startQuiz('medium')" class="medium">Medium</button>
+  <button onclick="startQuiz('hard')" class="hard">Hard</button>
+</div>
+
+<div class="quiz-container">
+  <div class="top-bar">
+    <div>Score: <span id="score">0</span></div>
+    <div>Time: <span id="timer">15</span>s</div>
+  </div>
+
+  <h2 id="question"></h2>
+
+  <div id="answers"></div>
+
+  <button id="nextBtn">Next</button>
+</div>
+
+<div class="result-container" id="result-container">
+  <h2>Final Score</h2>
+  <h1 id="final-score"></h1>
+  <button onclick="downloadCertificate()">Download Certificate</button>
+  <button onclick="location.reload()">Restart</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
